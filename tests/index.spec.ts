@@ -1,8 +1,8 @@
-import { it, expect, vi } from 'vitest';
-import { rollup } from 'rollup';
 import fs from 'node:fs';
+import { rollup } from 'rollup';
+import { expect, it, vi } from 'vitest';
 
-import nodeWasmPlugin from '../index';
+import nodeWasmPlugin from '../src/index';
 
 import { getCodeFromBundle, virtualPlugin } from './testUtils';
 
