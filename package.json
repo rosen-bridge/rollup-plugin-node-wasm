@@ -14,7 +14,8 @@
     "prettify": "prettier --write . --ignore-path ./.gitignore",
     "test": "vitest",
     "type-check": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "estree-walker": "^3.0.3",
@@ -33,10 +34,13 @@
     "typescript": "^4.9.4",
     "vitest": "^0.26.2"
   },
+  "peerDependencies": {
+    "rollup": "^3.22.0"
+  },
   "engines": {
     "node": ">=18.12.0"
   },
-  "peerDependencies": {
-    "rollup": "^3.22.0"
-  }
+  "files": [
+    "dist"
+  ]
 }
